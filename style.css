@@ -1,0 +1,80 @@
+
+:root{
+ --pink:#ff3b83; --text:#111; --muted:#888; --line:#ececec; --soft:#f7f7f7;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#fff;color:var(--text);
+ font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR","Apple SD Gothic Neo","Segoe UI",Arial,sans-serif}
+a{text-decoration:none;color:inherit}
+button{font:inherit}
+.top{border-bottom:1px solid var(--line);background:#fff}
+.top-inner{max-width:1024px;height:112px;margin:0 auto;display:flex;align-items:center;padding:0 36px;gap:14px}
+.brand{display:flex;align-items:center;font-size:39px;font-weight:900;letter-spacing:-2px}
+.brand img{width:58px;height:58px;object-fit:contain;margin-right:9px}
+.brand .on{color:var(--pink)}
+.brand .toon{color:#111}
+.spacer{flex:1}
+.library{border:1px solid #ddd;border-radius:999px;padding:14px 25px;font-weight:700;font-size:16px}
+.icon{font-size:32px;line-height:1;margin-left:12px}
+.weekbar{border-bottom:1px solid var(--line);background:#fff}
+.week-inner{max-width:1024px;margin:0 auto;display:grid;grid-template-columns:repeat(10,1fr);align-items:end;padding:0 30px}
+.week{position:relative;text-align:center;padding:23px 4px 21px;color:#444;font-size:19px;cursor:default;user-select:none}
+.week.active{font-weight:900;color:#111}
+.week.active:after{content:"";position:absolute;height:4px;background:var(--pink);left:28%;right:28%;bottom:0}
+.badge{display:inline-flex;width:25px;height:25px;border-radius:50%;background:var(--pink);color:#fff;align-items:center;justify-content:center;font-size:13px;font-weight:800;vertical-align:3px}
+.wrap{max-width:1024px;margin:0 auto;padding:25px 35px 105px}
+.heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:23px}
+.heading h1{font-size:31px;margin:0;font-weight:900;letter-spacing:-1px}
+.sort{color:#555;font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:27px 18px}
+.card{min-width:0}
+.card.clickable{cursor:pointer}
+.cover{width:100%;aspect-ratio:0.87/1;border-radius:8px;overflow:hidden;background:#eee}
+.cover img{width:100%;height:100%;display:block;object-fit:cover}
+.meta{padding-top:9px}
+.title-row{display:flex;align-items:center;gap:8px;font-size:20px;font-weight:800;white-space:nowrap;overflow:hidden}
+.onbadge{border:2px solid var(--pink);color:var(--pink);border-radius:5px;padding:1px 6px;font-size:13px;font-weight:900;line-height:1.25}
+.creator{color:#777;font-size:16px;margin-top:5px}
+.rating{margin-left:11px;color:#888}
+.bottom{position:fixed;z-index:30;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line)}
+.bottom-inner{max-width:1024px;height:82px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr)}
+.bitem{text-align:center;padding-top:10px;color:#555;font-size:13px}
+.bitem .bi{font-size:25px;display:block;height:34px}
+.bitem.active{font-weight:900;color:#111}
+
+.series-wrap{max-width:880px;margin:0 auto;padding:28px 22px 90px}
+.backline{font-size:14px;color:#666;margin-bottom:22px}
+.series-head{display:grid;grid-template-columns:220px 1fr;gap:28px;padding-bottom:28px;border-bottom:1px solid var(--line)}
+.series-cover{width:220px;aspect-ratio:.87/1;border-radius:10px;object-fit:cover}
+.series-info h1{font-size:38px;margin:5px 0 7px}
+.author{font-size:16px;font-weight:800;margin-bottom:15px}
+.desc{font-size:14px;line-height:1.7;color:#555;max-width:510px}
+.tags{display:flex;gap:7px;margin-top:14px}
+.tag{font-size:12px;padding:6px 9px;border-radius:99px;background:#f3f3f3}
+.episode-title{font-size:22px;font-weight:900;margin:29px 0 10px}
+.ep-row{display:grid;grid-template-columns:130px 1fr auto;gap:17px;align-items:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:15px 0;cursor:pointer}
+.ep-thumb{width:130px;height:82px;object-fit:cover;border-radius:7px}
+.ep-name{font-size:16px;font-weight:800}.ep-date{color:#888;font-size:12px;margin-top:6px}
+.ep-arrow{font-size:28px;color:#999}
+
+.viewer-top{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line)}
+.viewer-top-inner{height:54px;max-width:760px;margin:0 auto;display:flex;align-items:center;padding:0 13px}
+.vback{font-size:28px;margin-right:13px}.vtitle{font-size:14px;font-weight:900}.vsub{font-size:12px;color:#888;margin-left:8px}
+.viewer{max-width:720px;margin:0 auto;background:#fff;line-height:0}
+.viewer img{display:block;width:100%;height:auto;border:0;margin:0;padding:0}
+.viewer-end{line-height:1.6;text-align:center;padding:70px 20px 100px;color:#888;font-size:13px}
+.viewer-end a{display:inline-block;margin-top:18px;background:#111;color:#fff;padding:12px 22px;border-radius:99px;font-weight:800}
+
+@media(max-width:700px){
+ .top-inner{height:72px;padding:0 15px}
+ .brand{font-size:27px;letter-spacing:-1.4px}.brand img{width:40px;height:40px;margin-right:7px}
+ .library{font-size:13px;padding:9px 15px}.icon{font-size:25px;margin-left:7px}
+ .week-inner{padding:0 10px}.week{font-size:14px;padding:18px 1px 16px}
+ .badge{width:20px;height:20px;font-size:11px}
+ .wrap{padding:18px 14px 92px}.heading h1{font-size:23px}.sort{font-size:14px}
+ .grid{gap:20px 10px}.title-row{font-size:14px;gap:5px}.onbadge{font-size:10px;padding:1px 4px;border-width:1.5px}.creator{font-size:12px}.rating{margin-left:6px}
+ .bottom-inner{height:65px}.bitem{font-size:11px}.bitem .bi{font-size:20px;height:27px}
+ .series-wrap{padding:17px 14px 75px}.series-head{grid-template-columns:120px 1fr;gap:15px}.series-cover{width:120px}
+ .series-info h1{font-size:26px;margin-top:0}.author{font-size:13px;margin-bottom:7px}.desc{font-size:12px;line-height:1.55}.tags{margin-top:8px}.tag{font-size:10px;padding:4px 7px}
+ .episode-title{font-size:19px}.ep-row{grid-template-columns:100px 1fr auto;gap:12px}.ep-thumb{width:100px;height:66px}
+}
